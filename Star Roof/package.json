@@ -2,18 +2,19 @@
   "name": "star-roof",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./BACKEND/app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon ./BACKEND/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^6.7.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
   },
-"type":"module"
+  "type": "module"
 }
