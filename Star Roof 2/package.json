@@ -1,5 +1,5 @@
 {
-  "name": "star-roof-2",
+  "name": "star-roof",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -15,5 +15,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "type": "module"
 }
+
+

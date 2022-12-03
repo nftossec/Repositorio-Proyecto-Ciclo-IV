@@ -10,7 +10,7 @@ app.listen(port, ()=>{
    console.log("El servidor se esta ejecuntado correctamente ");
 })
 
-mongoose.connect("mongodb+srv://clientes:leonardo22034@clusterclientes.rk2pe43.mongodb.net///database-cliente?retryWrites=true&w=majority",
+mongoose.connect("mongodb+srv://clientes:leonardo22034@clusterclientes.rk2pe43.mongodb.net/database-cliente?retryWrites=true&w=majority",
 (err)=>{
 
    if (err) {
