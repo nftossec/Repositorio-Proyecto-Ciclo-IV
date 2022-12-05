@@ -1,6 +1,7 @@
 import express from "express"
 import mongoose from "mongoose";
 import clientRouter from "./routes/clientRouter.js";
+import testRouter from "./routes/testRouter.js";
 
 const app = express();
 const port = process.env.PORT || 8080
@@ -19,4 +20,6 @@ mongoose.connect("mongodb+srv://clientes:leonardo22034@clusterclientes.rk2pe43.m
 })
 
 app.use(express.json())
+
 app.use("/client", clientRouter)
+app.use("/test", testRouter)

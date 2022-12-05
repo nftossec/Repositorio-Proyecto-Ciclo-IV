@@ -1,4 +1,4 @@
-import monggose from "mongoose"
+import mongoose from "mongoose"
 
 const clientModel = mongoose.Schema({
     "nombre":{type:String, required:true},

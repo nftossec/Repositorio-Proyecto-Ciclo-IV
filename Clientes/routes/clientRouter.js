@@ -7,11 +7,11 @@ clientRouter.post("/", (req, res) =>{
     createClient(req, res)
 })
 
-clientRouter.get("/", (req, res) =>{
+clientRouter.get("/:id", (req, res) =>{
     readClient(req, res)
 })
 
-clientRouter.patch("/", (req, res) =>{
+clientRouter.patch("/:id", (req, res) =>{
     updateClient(req, res)
 })
 
