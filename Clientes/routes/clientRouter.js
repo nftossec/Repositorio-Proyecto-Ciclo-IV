@@ -3,19 +3,19 @@ import { createClient, deleteClient, readClient, updateClient } from "../control
 
 const clientRouter = express.Router()
 
-userRouter.post("/", (req, res) =>{
+clientRouter.post("/", (req, res) =>{
     createClient(req, res)
 })
 
-userRouter.get("/", (req, res) =>{
+clientRouter.get("/", (req, res) =>{
     readClient(req, res)
 })
 
-userRouter.patch("/", (req, res) =>{
+clientRouter.patch("/", (req, res) =>{
     updateClient(req, res)
 })
 
-user.Router.delete("/", (req, res) =>{
+clientRouter.delete("/", (req, res) =>{
     deleteClient(req, res)
 })
 
