@@ -1,6 +1,6 @@
-import mongose from "mongoose";
+import mongoose from "mongoose";
 
-const categoryModel = mongose.Schema({
+const categoryModel = mongoose.Schema({
   "nombre":String,
   "descripcion": String
 })
@@ -8,4 +8,5 @@ const categoryModel = mongose.Schema({
 
 
 
-export default mongose.model("category",categoryModel)
+export default mongoose.model("categories",categoryModel)
+

@@ -1,6 +1,7 @@
 import express from "express"
 import mongoose from "mongoose";
 import categoryRouter from "./router/categoryRouter.js";
+import clientRouter from "./router/clientRouter.js";
 
  
 const app=express();
@@ -24,3 +25,5 @@ mongoose.connect("mongodb+srv://clientes:leonardo22034@clusterclientes.rk2pe43.m
 
 app.use(express.json())
 app.use("/category",categoryRouter)
+app.use("/client", clientRouter)
+
