@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import cabinsRouter from "./router/cabinsRouter.js";
 
 import categoryRouter from "./router/categoryRouter.js";
 import clientRouter from "./router/clientRouter.js";
@@ -27,4 +28,5 @@ app.use(express.json());
 app.use("/category", categoryRouter);
 app.use("/client", clientRouter);
 app.use("/userAdmin", userAdminRouter);
+app.use("/cabins",cabinsRouter);
 
