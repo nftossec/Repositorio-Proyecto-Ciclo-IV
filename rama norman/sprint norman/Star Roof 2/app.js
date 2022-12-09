@@ -16,7 +16,7 @@ app.listen(port, ()=>{
 mongoose.connect("mongodb+srv://clientes:leonardo22034@clusterclientes.rk2pe43.mongodb.net/database-cliente?retryWrites=true&w=majority",
 (err)=>{
 
-   if (err) {
+   if (err) { 
    console.log(err);
 }else{
    console.log("conectado a la base de datos.");
