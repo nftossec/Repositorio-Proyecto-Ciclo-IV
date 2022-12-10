@@ -1,5 +1,5 @@
 import express from "express"
-import { createcategory, readcategory, updatecategory } from "../controller/category.js"
+import { createcategory, deletecategory, readcategory, updatecategory } from "../controller/categoryController.js"
 
 
 
@@ -20,5 +20,10 @@ categoryRouter.get("/", (req, res) => {
 categoryRouter.patch("/", (req, res) => {
     updatecategory(res)
 })
+
+categoryRouter.patch("/", (req, res) => {
+    deletecategory(res)
+})
+
 
 export default categoryRouter

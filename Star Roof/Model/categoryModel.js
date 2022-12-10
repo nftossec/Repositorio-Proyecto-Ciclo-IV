@@ -1,8 +1,8 @@
 import mongoose from "mongoose"
 
 const categoryModel = mongoose.Schema({
-  "nombre":String,
-  "descripcion": String
+  nombre: { type: String, required: true },
+  descripcion: { type: String, required: true },
 })
 
 
