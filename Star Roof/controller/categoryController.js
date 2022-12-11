@@ -23,11 +23,11 @@ export async function createcategory(req, res){
 
 // leer
 
-export async function readUserAdmin2(req, res) {
+export async function readcategory(req, res) {
   let documentos;
 
   try {
-    documentos = await userAdminModel.find();
+    documentos = await categoryModel.find();
   } catch (error) {
     res.status(400).json(error.message);
     return;

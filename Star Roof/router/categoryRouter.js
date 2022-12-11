@@ -3,6 +3,7 @@ import { createcategory, deletecategory, readcategory, updatecategory } from "..
 
 
 
+
 const categoryRouter = express.Router()
 
 //CRUD
@@ -13,7 +14,7 @@ categoryRouter.post("/", (req, res) => {
 
 //LEER: GET
 categoryRouter.get("/", (req, res) => {
-    readcategory(res)
+readcategory(res)
 })
 
 //ACTUALIZAR: PUT / PATCH
