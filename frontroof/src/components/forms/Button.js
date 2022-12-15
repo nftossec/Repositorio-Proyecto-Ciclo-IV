@@ -2,14 +2,14 @@ import React from "react";
 import "./forms.css";
 
 function alerta() {
-  alert("Cualquier mensaje");
+  alert("Se ha guardado correctamente");
 }
 
 export default function Button(props) {
-  const { children } = props;
+  const { children, onClick, type } = props;
 
   return (
-    <button className="button" onClick={alerta}>
+    <button className="button" type={type} onClick={onClick}>
       {children}
     </button>
   );
