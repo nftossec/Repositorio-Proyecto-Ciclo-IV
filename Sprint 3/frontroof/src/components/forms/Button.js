@@ -5,10 +5,10 @@ function alerta() {
   alert("Redireccionando");
 }
 export default function Button(props) {
-  const { children, type } = props;
+  const { children, type, onClick } = props;
 
   return (
-    <button className="button" type={type} onClick={() => alerta()}>
+    <button className="button" type={type} onClick={onClick}>
       {children}
     </button>
   );
