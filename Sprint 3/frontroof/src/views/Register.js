@@ -22,17 +22,17 @@ import React,  { useState } from "react";
 				password,
 				correo,
 				edad,
-				
 			}
 			
 		})
 	    });
-		if(res.ok){
-			const data = await res.json();
-			alert(data.message);
+		if (res.ok){
+			console.log(res);
+			const data = await res.json()
+			console.log(data);
+			alert(data.message)
 		}
-		
-	  }
+	}
 
 	  const [nombreCliente, setNombreCliente] = useState("");
 	  const [identificacion, setIdentificacion] = useState("");

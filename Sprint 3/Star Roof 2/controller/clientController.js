@@ -23,11 +23,13 @@ export async function createClient(req, res){
     let documento
     try {
         documento = await clientModel.create(cliente)
+        
     } catch (error) {
         res.status(400).json(error.message)
         return;
     }
-    res.status(201).json(documento)
+    res.status(201).json({"message": "Bienvenido a Star Roof"})
+    
 }
 
 //LEER
