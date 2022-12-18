@@ -6,7 +6,7 @@ import bcrypt from "bcrypt"
 //CREAR
 export async function createClient(req, res){
     const cliente  = req.body.cliente
-    
+       
     const {password} = cliente
     
     const encriptedPassword = await bcrypt.hash(password, 10)
@@ -23,7 +23,6 @@ export async function createClient(req, res){
     let documento
     try {
         documento = await clientModel.create(cliente)
-        console.log();documento
     } catch (error) {
         res.status(400).json(error.message)
         return;

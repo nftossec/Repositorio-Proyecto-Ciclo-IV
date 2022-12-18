@@ -3,14 +3,15 @@ import reservationModel from "../Model/reservationModel.js"
 //CRUD
 
 export async function createReservation(req, res){
-
+  
   const reservation = req.body.reservation
-
+     
   //validation body of userAdmin
 let documento;
 
 try {
   documento = await reservationModel.create(reservation)
+  
 } catch (error) {
       res.status(400).json(error.message)
       return;

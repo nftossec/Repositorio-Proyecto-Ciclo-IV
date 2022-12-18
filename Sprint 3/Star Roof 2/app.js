@@ -6,7 +6,7 @@ import categoryRouter from "./router/categoryRouter.js";
 import clientRouter from "./router/clientRouter.js";
 import loginRouter from "./router/loginRouter.js";
 
-import registerRouter from "./router/registerRouter.js";
+//import registerRouter from "./router/registerRouter.js";
 import reservationRouter from "./router/reservationRouter.js";
 import userAdminRouter from "./router/userAdminRouter.js";
 
@@ -38,4 +38,4 @@ app.use("/userAdmin", userAdminRouter);
 app.use("/cabin", cabinRouter);
 app.use("/reservation", reservationRouter);
 app.use("/login", loginRouter);
-app.use("/register", registerRouter);
+//app.use("/register", registerRouter);

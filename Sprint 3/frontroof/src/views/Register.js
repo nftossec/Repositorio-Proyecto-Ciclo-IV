@@ -33,7 +33,6 @@ import React,  { useState } from "react";
 		}
 		
 	  }
-	
 
 	  const [nombreCliente, setNombreCliente] = useState("");
 	  const [identificacion, setIdentificacion] = useState("");
