@@ -3,6 +3,7 @@ import Card from "../components/utils/Card";
 import Input from "../components/forms/Input";
 import Gap from "../components/utils/Gap";
 import Button from "../components/forms/Button";
+import {Link, link} from "react-router-dom";
 
 export default function Login() {
   async function onSubmit(e) {
@@ -17,27 +18,30 @@ export default function Login() {
         password
       },
     });
-    const jsonres = await res.json();
-    alert(jsonres.message);
+    if (res.ok){
+    const data = await res.json();
+    alert(data.message);
+    }
   }
+    
 
   const [user, setUser] = useState("");
 
   const [password, setPassword] = useState("");
 
   return (
+    <div>
     <form onSubmit={onSubmit}>
       <Card padding="2rem" flexDirection="column" borderRadius="0.5rem">
         <h1>Login</h1>
-        <Gap>2rem</Gap>
-        <Input onChange={(v) => setUser(v.target.value)}>Usuario</Input>
-        <Gap>1rem</Gap>
+        <Input onChange={(v) => setUser(v.target.value)}>Name</Input>
         <Input type="password" onChange={(v) => setPassword(v.target.value)}>
-          Contraseña
+          Password
         </Input>
-        <Gap>2rem</Gap>
         <Button type="submit">INGRESAR</Button>
       </Card>
     </form>
+    <div className= "regis"><p>¿No tienen cuenta? <Link to= "/Register">Crear una cuenta</Link></p></div>
+    </div>
   );
 }

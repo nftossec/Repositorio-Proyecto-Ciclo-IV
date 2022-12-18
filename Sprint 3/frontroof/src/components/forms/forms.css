@@ -15,9 +15,9 @@
 
 .input{
     text-align: start;
-    padding: 0,6rem;
+    padding: 0.6rem;
     border:none;
-    border-bottom: solid 2px;
+    border-bottom: solid 1px;
     background-color: antiquewhite;
 }
 

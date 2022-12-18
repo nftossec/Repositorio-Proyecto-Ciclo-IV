@@ -23,6 +23,7 @@ export async function createClient(req, res){
     let documento
     try {
         documento = await clientModel.create(cliente)
+        console.log();documento
     } catch (error) {
         res.status(400).json(error.message)
         return;
