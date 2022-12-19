@@ -1,0 +1,23 @@
+.button{
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: rgb(127, 127, 138);
+    color: rgb(236, 245, 238);
+    border-radius: 0.5rem;
+}
+/*manita con hover*/
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(42, 114, 62);
+    
+}
+
+.input{
+    text-align: start;
+    padding: 0.6rem;
+    border:none;
+    border-bottom: solid 1px;
+    background-color: antiquewhite;
+}
+
