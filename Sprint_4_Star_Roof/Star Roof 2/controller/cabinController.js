@@ -1,87 +1,77 @@
-import cabinModel from "../Model/cabinModel.js" 
+import cabinModel from "../Model/cabinModel.js";
 
 //CRUD
 
-export async function createCabin(req, res){
-
-  const cabin = req.body.cabin
+export async function createCabin(req, res) {
+  const cabin = req.body.cabin;
 
   //validation body of userAdmin
-let documento;
+  let documento;
 
-try {
-  documento = await cabinModel.create(cabin)
-} catch (error) {
-      res.status(400).json(error.message)
-      return;
-}
-  res.status(201).json(documento)
-}
-
-
-
-export async function readCabin(req, res){
-  const nombreCabin = req.params.nombreCabin
-
- let documento;
-
- try {
-      documento = await cabinModel.findOne({"nombreCabin":nombreCabin})
- } catch (error) {
-    res.status(400).json(error.message)
+  try {
+    documento = await cabinModel.create(cabin);
+  } catch (error) {
+    res.status(400).json(error.message);
     return;
-  
- }
- res.status(200).json(documento)
+  }
+  res.status(201).json(documento);
 }
 
+export async function readCabin(req, res) {
+  const nombreCabin = req.params.nombreCabin;
 
-export async function readCabin2(req, res){
-  
- let documentos;
+  let documento;
 
- try {
-      documentos = await cabinModel.find()
- } catch (error) {
-    res.status(400).json(error.message)
+  try {
+    documento = await cabinModel.findOne({ nombreCabin: nombreCabin });
+  } catch (error) {
+    res.status(400).json(error.message);
     return;
-  
- }
- res.status(200).json(documentos)
+  }
+  res.status(200).json(documento);
 }
 
+export async function readCabin2(req, res) {
+  let documentos;
 
-
-
-export async function updateCabin(req, res){
-  const nombreCabin = req.params.nombreCabin
-  const updates = req.body.updates
-  
- let documento;
-
- try {
-      documento = await cabinModel.findOneAndUpdate({"nombreCabin":nombreCabin}, updates)
- } catch (error) {
-    res.status(400).json(error.message)
+  try {
+    documentos = await cabinModel.find();
+  } catch (error) {
+    res.status(400).json(error.message);
     return;
- }
-
- res.status(200).json(documento)
+  }
+  res.status(200).json(documentos);
 }
 
+export async function updateCabin(req, res) {
+  const nombreCabin = req.params.nombreCabin;
+  const updates = req.body.updates;
 
+  let documento;
 
-export async function deleteCabin(req, res){
-  const nombreCabin = req.body.nombreCabin
+  try {
+    documento = await cabinModel.findOneAndUpdate(
+      { nombreCabin: nombreCabin },
+      updates
+    );
+  } catch (error) {
+    res.status(400).json(error.message);
+    return;
+  }
+
+  res.status(200).json(documento);
+}
+
+export async function deleteCabin(req, res) {
+  const nombreCabin = req.body.nombreCabin;
 
   let documento = null;
- 
+
   try {
-       documento = await cabinModel.findOneAndDelete({"nombreCabin":nombreCabin})
+    documento = await cabinModel.findOneAndDelete({ nombreCabin: nombreCabin });
   } catch (error) {
-     res.status(400).json(error.message)
-     return;
-   
+    res.status(400).json(error.message);
+    return;
   }
-  res.status(200).json(documento)
+  res.status(200).json(documento);
 }

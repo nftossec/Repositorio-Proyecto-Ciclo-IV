@@ -3,12 +3,13 @@ import Card from "../components/utils/Card";
 import Input from "../components/forms/Input";
 import Gap from "../components/utils/Gap";
 import Button from "../components/forms/Button";
+import { API_URL } from "../services/api";
 
 export default function Reservation() {
   async function onSubmit(e) {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:8080/Reservation", {
+    const res = await fetch(API_URL + "/Reservation", {
       method: "POST",
       mode: "cors",
       headers: {

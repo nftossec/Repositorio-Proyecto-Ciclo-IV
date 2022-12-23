@@ -3,13 +3,15 @@ import Card from "../components/utils/Card";
 import Input from "../components/forms/Input";
 import Gap from "../components/utils/Gap";
 import Button from "../components/forms/Button";
-import {Link, link} from "react-router-dom";
+import {Link} from "react-router-dom";
+
+import { API_URL } from "../services/api";
 
 export default function Login() {
   async function onSubmit(e) {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:8080/login", {
+    const res = await fetch(API_URL + "/login", {
       method: "GET",
       mode: "cors",
       headers: {

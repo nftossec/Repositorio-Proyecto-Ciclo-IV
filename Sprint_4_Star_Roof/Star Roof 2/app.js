@@ -6,9 +6,10 @@ import categoryRouter from "./router/categoryRouter.js";
 import clientRouter from "./router/clientRouter.js";
 import loginRouter from "./router/loginRouter.js";
 
-//import registerRouter from "./router/registerRouter.js";
 import reservationRouter from "./router/reservationRouter.js";
 import userAdminRouter from "./router/userAdminRouter.js";
+
+dotenv.config();
 
 const app = express();
 
@@ -17,19 +18,20 @@ app.listen(port, () => {
   console.log("El servidor se esta ejecuntado correctamente ");
 });
 
-mongoose.connect(
-  "mongodb+srv://clientes:leonardo22034@clusterclientes.rk2pe43.mongodb.net/database-cliente?retryWrites=true&w=majority",
-  (err) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("conectado a la base de datos.");
-    }
+const uri = process.env.URI;
+
+mongoose.set("strictQuery", true);
+// @ts-ignore
+mongoose.connect(uri, (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Database is now connected");
   }
-);
+});
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: process.env.APP_URL,
   }));
 app.use(express.json());
 app.use("/category", categoryRouter);
@@ -38,4 +40,4 @@ app.use("/userAdmin", userAdminRouter);
 app.use("/cabin", cabinRouter);
 app.use("/reservation", reservationRouter);
 app.use("/login", loginRouter);
-//app.use("/register", registerRouter);
+

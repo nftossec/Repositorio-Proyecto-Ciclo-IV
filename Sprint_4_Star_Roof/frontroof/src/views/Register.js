@@ -4,12 +4,14 @@ import React,  { useState } from "react";
 	import Gap from "../components/utils/Gap";
 	import Button from "../components/forms/Button";
 
+	import { API_URL } from "../services/api";
+
 	export default function Register(){
 	  
 	    async function onSubmit(e) {
 	    e.preventDefault();
 
-	    const res = await fetch("http://localhost:8080/client", {
+	    const res = await fetch(API_URL + "/client",{
 	      method: "POST",
 	      mode: "cors",
 	      headers: {
