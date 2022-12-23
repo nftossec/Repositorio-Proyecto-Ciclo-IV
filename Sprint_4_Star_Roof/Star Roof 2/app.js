@@ -15,15 +15,12 @@ import userAdminRouter from "./router/userAdminRouter.js";
 
 const app = express();
 
-// const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
   console.log("Server is running on port " + port);
 });
 
-// app.listen(port, () => {
-//   console.log("El servidor se esta ejecuntado correctamente ");
-// });
 
 const uri = process.env.URI;
 
@@ -37,8 +34,9 @@ mongoose.connect(uri, (err) => {
   }
 });
 
+
 app.use(cors({
-    origin: process.env.APP_URL,
+    origin: process.env.APP_URL,  
   }));
 app.use(express.json());
 app.use("/category", categoryRouter);
