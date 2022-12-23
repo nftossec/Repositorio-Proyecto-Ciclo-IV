@@ -9,14 +9,21 @@ import loginRouter from "./router/loginRouter.js";
 import reservationRouter from "./router/reservationRouter.js";
 import userAdminRouter from "./router/userAdminRouter.js";
 
-dotenv.config();
+
+
+// dotenv.config();
 
 const app = express();
 
-const port = process.env.PORT || 8080;
+// const port = process.env.PORT || 8080;
+
 app.listen(port, () => {
-  console.log("El servidor se esta ejecuntado correctamente ");
+  console.log("Server is running on port " + port);
 });
+
+// app.listen(port, () => {
+//   console.log("El servidor se esta ejecuntado correctamente ");
+// });
 
 const uri = process.env.URI;
 
