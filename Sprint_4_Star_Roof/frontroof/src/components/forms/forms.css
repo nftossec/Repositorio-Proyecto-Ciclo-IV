@@ -1,0 +1,111 @@
+
+.button{
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    width: 50%;
+    border-radius: 10px;
+    border-bottom: solid 1px;
+    margin: 0 auto;
+    background-color: #FE3051;
+    color: rgb(236, 245, 238);
+    border-radius: 0.5rem;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    top: -30px;
+}
+
+
+.button:hover{
+    cursor: pointer;
+    background-color: #dfdcdc;
+    color: #FE3051;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.input{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: start;
+    padding: 0.6rem;
+    width: 70%;
+    align-items: center;
+    border-radius: 10px;
+    border-bottom: solid 1px;
+    color: #FE3051;
+    margin: 4px auto;
+    position: relative;
+    top: -45px;
+    background-color: antiquewhite;
+}
+
+
+.reservacion{
+        position: relative;
+        top:35px;
+        width: 550px;
+        height: 100px;
+        margin: 0 auto;
+        font-family: 'Bodoni Moda', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 50px;
+        color: #ffffff;
+        text-shadow: 0px 4px 4px #FE3051
+}
+
+
+.login-text{
+        position: relative;
+        top: 50px;
+        width: 550px;
+        height: 100px;
+        margin: 0 auto;
+        font-family: 'Bodoni Moda', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 50px;
+        color: #ffffff;
+        text-shadow: 0px 4px 4px #FE3051
+}
+
+
+
+.regis{
+    position: relative;
+    top: -40px;
+    color: #ffffff;
+    opacity: 80%;
+}
+
+.regis2 {
+    margin-left: 1%;
+    color: #ffffff;
+}
+
+.text-register{
+    position: relative;
+        top: 50px;
+        width: 550px;
+        height: 100px;
+        margin: 0 auto;
+        font-family: 'Bodoni Moda', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 50px;
+        color: #ffffff;
+        text-shadow: 0px 4px 4px #FE3051
+}
+
+
